@@ -1,0 +1,10 @@
+<ShellContent
+    Title="Reservar"
+    Icon="booking_icon.png"  ContentTemplate="{DataTemplate views:ReservasPage}"
+    Route="ReservasPage" />
+
+<ShellContent
+    Title="Sobre"
+    Icon="info_icon.png" 
+    ContentTemplate="{DataTemplate views:SobrePage}"
+    Route="SobrePage" />
