@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.ReservasPage"
+             Title="Fazer Reserva">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+            
+            <Label Text="Nova Reserva"
+                   TextColor="{StaticResource Primary}"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0, 10, 0, 10" />
+
+            <Label Text="Nome Completo:" TextColor="{StaticResource TextColor}" />
+            <Entry Placeholder="Digite seu nome" PlaceholderColor="{StaticResource LightGray}" Keyboard="Text" />
+            
+            <Label Text="Data de Check-in:" TextColor="{StaticResource TextColor}" />
+            <DatePicker Format="D" TextColor="{StaticResource Primary}" />
+
+            <Label Text="Data de Check-out:" TextColor="{StaticResource TextColor}" />
+            <DatePicker Format="D" TextColor="{StaticResource Primary}" />
+            
+            <Label Text="Tipo de Quarto:" TextColor="{StaticResource TextColor}" />
+            <Picker Title="Selecione o Tipo de Quarto" TextColor="{StaticResource TextColor}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Standard</x:String>
+                        <x:String>Luxo</x:String>
+                        <x:String>Suíte Presidencial</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button Text="Confirmar Reserva"
+                    BackgroundColor="{StaticResource Tertiary}"
+                    TextColor="{StaticResource OnTertiary}"
+                    CornerRadius="10"
+                    Margin="0, 30, 0, 0"
+                    Clicked="OnConfirmarReservaClicked" />
+                    
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
